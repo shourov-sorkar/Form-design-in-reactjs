@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  margin:  0;
+  padding: 0;
+}
+body{
+  background: #EEF2F7 !important;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.canvas{
+  padding: 10px 10px 4px 4px;
+}
+.banner-img{
+  border-radius: 8px;
+  margin-top: 5px;
+}
+.first-phase{
+  background: #ffffff;
+  box-shadow:0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+  margin-top: 15px;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-left: 20px !important;
+  padding-bottom: 20px;
+  padding-right: 20px !important;
+  font-family: 'Roboto', sans-serif;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .2px;
+  line-height: 20px;
+  color: #000000;
+}
+span{
+  font-weight: bold;
+}
+
+.first-phase img{
+  padding-left: 55px !important;
+}
+
+.second-phase{
+  background: #ffffff;
+  box-shadow:0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+  margin-top: 15px;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-left: 20px !important;
+  padding-bottom: 20px;
+  padding-right: 20px !important;
+}
+
+ul{
+  padding-top: 20px;
+  padding-left: 20px !important;
+  padding-bottom: 20px;
+  padding-right: 20px !important;
+}
+.btn{
+  background-color: #ffffff !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn.focus, .btn:focus {
+
+  box-shadow: none !important;
+}
+.mb-6{
+  font-size: 20px;
+}
+
+.name{
+  border-bottom: 1px solid red;
+  display: block;
 }
