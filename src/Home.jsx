@@ -10,16 +10,18 @@ import web from "./img/hero.jpg";
 const Home = () => {
     return (
         <>
-             <Header />
+            <Header />
+
+
             <Container fluid classNam="canvas">
 
-           
-                
-            
+
+
+
                 <Row>
-               
+
                     <Col md={{ span: 6, offset: 3 }} className="first-phase">
-                    
+
                         <h1>Amar iSchool: Internship Program</h1>
                         <p>Amar iSchool is an initiative that started its journey to deliver quality education and effective learning. It is an educational platform that provides quality education through live video sharing by high profiled mentors. Since 2019, Amar iSchool is connecting hundreds of young learners from more than 50 universities with different courses.</p>
                         <p>Are you passionate about finding the best talent of yours? Do you enjoy working in a team towards challenging goals in the fast-moving online education industry? Have you ever imagined working on a growing educational platform where you can develop your skills as well as empower others?  This role may be a perfect role for you! Here’s your chance to think beyond the ordinary.</p>
@@ -52,7 +54,7 @@ const Home = () => {
                             <li>Effective written and verbal communication skills in Bengali and English.</li>
                             <li>Candidates having basic knowledge on Adobe Illustrator and Photoshop will get preference.</li>
                         </ul>
-                        <br/>
+                        <br />
                         <p>Benefits: </p>
                         <ul>
                             <li>Letter of recommendation and certificate after successful completion.</li>
@@ -63,9 +65,9 @@ const Home = () => {
                             <li>Effective written and verbal communication skills in Bengali and English.</li>
                             <li>Full-time positions may be offered based on performance.</li>
                         </ul>
-                        <br/>
+                        <br />
                         <p>Application Deadline: 15 June 2020. </p>
-                        <br/>
+                        <br />
                         <p>Detailed Job Description and Responsibilities</p>
                         <p>Social Media Team Intern</p>
                         Duties of the Social Media Intern:
@@ -75,7 +77,7 @@ const Home = () => {
                             <li>Assist in preparing the monthly social media plan. </li>
                         </ul>
                         Required Skills for Social Media Intern:
-                        <ul>                       
+                        <ul>
                             <li>Having sound knowledge of the platforms as mentioned earlier.</li>
                             <li>Basic Knowledge of social media marketing trends. </li>
                             <li>Excellent communication skills in English and Bangla.</li>
@@ -83,7 +85,7 @@ const Home = () => {
                         </ul>
                         <p>Content Development Team Intern</p>
                         Duties of the Content Development Team Intern:
-                        <ul>                       
+                        <ul>
                             <li>Writing, editing, and proofreading content.</li>
                             <li>Assisting the Content Development Team consisting of writers, graphic designers, videographers, etc. </li>
                             <li>Formulate a cross-platform content strategy.</li>
@@ -91,7 +93,7 @@ const Home = () => {
                             <li>Support to manage content across all platforms, including email and social media.</li>
                         </ul>
                         <p>Required skills for the Content Development Team Intern:</p>
-                        <ul>                       
+                        <ul>
                             <li>Excellent writing skills in English and Bangla, as well as the ability to communicate and collaborate effectively.</li>
                             <li>The ability to follow directions and work in a self-motivated and proactive manner.</li>
                             <li>Efficiency in MS Office Applications (Word, Excel, PowerPoint) and Google Applications (Google Docs, Google Slides, Google Drive).</li>
@@ -99,12 +101,12 @@ const Home = () => {
                         </ul>
                         <p>Project Team Intern</p>
                         Duties of the Project Team Intern:
-                        <ul>                       
+                        <ul>
                             <li>Leading and assisting different projects (Operations Team, Campus Ambassador Program, Course Development).</li>
                             <li>Support the team in arranging and managing events of Amar iSchool.</li>
                         </ul>
                         Required Skills for the Project Team Intern:
-                        <ul>                       
+                        <ul>
                             <li>Team-oriented and responsive.</li>
                             <li>Good interpersonal communication and management skills.</li>
                             <li>Proficiency in both English and Bangla.</li>
@@ -113,11 +115,13 @@ const Home = () => {
                         </ul>
                     </Col>
                     <Col md={{ span: 6, offset: 3 }}>
-                    <NavLink to="/second" className="btn">Next</NavLink>
+                        <NavLink to="/second" className="btn">Next</NavLink>
                     </Col>
-                    
+
                 </Row>
             </Container>
+
+
         </>
     );
 };
