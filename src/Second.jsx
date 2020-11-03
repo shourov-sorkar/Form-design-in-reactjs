@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form"
 import Header from "./layout/Header"
 import { NavLink } from "react-router-dom";
-import TextInput from "../node_modules/react-textinput-field";
+
 const Second = () => {
+  const [data, setData] = useState({
+    name: "shourov",
+    universityname: "IUBAT",
+    dept: "CSE",
+    semester: "9th",
+    blood: "AB+",
+    birth: "12.08.1999",
+    phone: "01303499315",
+    alterphone: "01737278333",
+    mail: "rshourov156@gmail.com",
+    facebook: "https://www.facebook.com/shourov.cse1810",
+    linedIn: "https://www.linkedin.com/in/shourov-cse-1810/",
+    activities: "adsfdsfa",
+    organizations: "vgddsvvd",
+    cv: "",
+  });
+  const InputEvent = (event) => {
+    const { name, value } = event.target;
+
+    setData((preVal) => {
+      return {
+        ...preVal,
+        [name]: value,
+      };
+
+    });
+  };
+  const formSubmit = (a) => {
+    a.preventDefault();
+    console.log(data.name)
+    
+  };
   return (
     <>
       <Header />
@@ -42,84 +74,83 @@ const Second = () => {
               ))}
             </Form>
           </Col>
+          <form onSubmit={formSubmit}>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Name *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="name" value={data.name} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">University Name *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="universityname" value={data.universityname} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Department & Program *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="dept" value={data.dept} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Year & Semester *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="semester" value={data.semester} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Blood Group *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="blood" value={data.blood} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Birth Date *</label>
+              <input type="date" class="form-control" id="exampleFormControlInput1" name="birth" value={data.birth} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Phone No *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="phone" value={data.phone} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Alternative Phone No *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" name="alterphone" value={data.alterphone} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">E-mail *</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" name="mail" value={data.mail} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">Facebook Profile link *</label>
+              <input type="url" class="form-control" id="exampleFormControlInput1" name="facebook" value={data.facebook} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlInput1" class="form-label">LinkedIn Profile link *</label>
+              <input type="url" class="form-control" id="exampleFormControlInput1" name="linedIn" value={data.linedIn} onChange={InputEvent} placeholder="Your Answer" required />
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlTextarea1" class="form-label">Co-Curricular Activities and Achievements (if any)</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" name="activities " value={data.activities} onChange={InputEvent} placeholder="Your Answer" rows="3"></textarea>
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
+              <label for="exampleFormControlTextarea1" class="form-label">Are you involved with different organizations? If the answer is Yes. Please write it below with your position title including, the Company or Organization name. (Ex: Intern at YZ Company/ Campus Ambassador of ZZ organization/ Executive at YY Club etc.)</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" name="organizations " value={data.organizations} onChange={InputEvent} rows="3"></textarea>
+              <span className="border"></span>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="first-phase name "> <br />
+              <label for="exampleFormControlInput1" class="form-label">Attach your CV/Resume here *</label>
 
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Name *</label> <br />
+              <input type="file" class="form-control" id="exampleFormControlInput1" name="cv " value={data.cv} onChange={InputEvent} placeholder="Your Answer"  />
 
-            <input className="input" id="form-one" type="text" placeholder="Your answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">University Name  *</label> <br />
-
-            <input className="input" id="form-one" type="text" placeholder="Your answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Department & Program  *</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Year & Semester *</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Blood Group *</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Birth Date *</label> <br />
-            <input className="input" id="form-one" type="date" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Phone No *</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Alternative Phone No *</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Email *</label> <br />
-            <input className="input" id="form-one" type="email" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Facebook ID Link *</label> <br />
-            <input className="input" id="form-one" type="url" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Linkedin Profile Link *</label> <br />
-            <input className="input" id="form-one" type="url" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Co-Curricular Activities and Achievements (if any)</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name ">
-            <label htmlFor="input">Are you involved with different organizations? If the answer is Yes. Please write it below with your position title including, the Company or Organization name. (Ex: Intern at YZ Company/ Campus Ambassador of ZZ organization/ Executive at YY Club etc.)</label> <br />
-            <input className="input" id="form-one" type="text" placeholder="Enter answer" />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }} className="first-phase name "> <br />
-            <label htmlFor="input">Attach your CV/Resume here *</label> <br />
-
-            <input className="input" id="form-one" type="file" placeholder="Enter answer" required />
-            <span className="border"></span>
-          </Col>
-          <Col md={{ span: 6, offset: 3 }}>
-            <NavLink to="/Home" className="btn">Back</NavLink>
-            <input className="btn submit" value="Submit" type="submit" required />
-          </Col>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }}>
+              <NavLink to="/Home" className="btn">Back</NavLink>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </Col>
+          </form>
         </Row>
       </Container>
     </>

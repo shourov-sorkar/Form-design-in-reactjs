@@ -11,13 +11,7 @@ const Home = () => {
     return (
         <>
             <Header />
-
-
             <Container fluid classNam="canvas">
-
-
-
-
                 <Row>
 
                     <Col md={{ span: 6, offset: 3 }} className="first-phase">
@@ -117,7 +111,6 @@ const Home = () => {
                     <Col md={{ span: 6, offset: 3 }}>
                         <NavLink to="/second" className="btn">Next</NavLink>
                     </Col>
-
                 </Row>
             </Container>
 
